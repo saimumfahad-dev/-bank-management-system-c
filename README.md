@@ -1,82 +1,119 @@
 
-# Bank Management System in C
+<h1 align="center">Bank Management System</h1>
 
-A console-based banking application developed in C as an academic programming project.
+<p align="center">
+  <strong>A console-based banking simulator built with C.</strong><br />
+  An academic project exploring account management, transactions, and persistent file storage.
+</p>
 
-The application demonstrates structured programming, user-defined structures, conditional statements, and binary file handling.
+<p align="center">
+  <img src="https://img.shields.io/badge/Language-C-0F766E?style=flat-square&logo=c&logoColor=white" alt="C" />
+  <img src="https://img.shields.io/badge/Interface-CLI-17252A?style=flat-square" alt="Command line" />
+  <img src="https://img.shields.io/badge/Storage-Binary%20Files-0F766E?style=flat-square" alt="Binary files" />
+  <img src="https://img.shields.io/badge/Type-Academic%20Project-263238?style=flat-square" alt="Academic project" />
+</p>
+
+<p align="center">
+  <a href="#overview">Overview</a> ·
+  <a href="#features">Features</a> ·
+  <a href="#getting-started">Getting Started</a> ·
+  <a href="#project-structure">Source</a>
+</p>
+
+---
+
+## Overview
+
+**Bank Management System** is a menu-driven C application that simulates basic banking operations. It was developed as an academic programming project to practice structured programming, user-defined structures, account workflows, and binary file handling.
+
+The program runs locally in the terminal. It is designed for learning, not real financial transactions.
 
 ## Features
 
-- Account registration with account number, phone number, and password
-- Login authentication using phone number and password
-- Account balance inquiry
-- Deposit money into an account
-- Withdraw money with insufficient-balance checking
-- Change account password
-- Save account information locally using binary files
+| Area | Implemented functionality |
+| --- | --- |
+| Account setup | Register using an account number, phone number, and password |
+| Account access | Log in using the registered phone number and password |
+| Balance | View the current account balance |
+| Transactions | Deposit and withdraw funds, with insufficient-balance checking |
+| Account settings | Change the account password |
+| Persistence | Save and load account data locally using binary `.dat` files |
 
-## Technologies Used
+## Technologies & Concepts
+
+<p>
+  <img src="https://skillicons.dev/icons?i=c&theme=dark" alt="C programming language" height="44" />
+</p>
 
 - **Language:** C
-- **Libraries:** stdio.h, stdlib.h, string.h
-- **Concepts:** Structures, file handling, conditional statements, loops, and switch-case
+- **Libraries:** `stdio.h`, `stdlib.h`, `string.h`
+- **IDE used:** Code::Blocks
+- **Concepts:** structures, functions, conditional logic, loops, switch statements, string operations, and binary file I/O
 
-## How to Run
+## Getting Started
 
 ### Requirements
 
-- GCC compiler or Code::Blocks IDE
-- Windows operating system recommended
+- A C compiler such as GCC, or Code::Blocks configured with a C compiler
+- A terminal or command prompt
 
-### Using GCC
+### Build and run with GCC
 
-Compile the program:
+Open a terminal in the folder containing `main.c`.
 
-~~~bash
+**Windows:**
+
+```bash
 gcc main.c -o bank-management-system.exe
-~~~
-
-Run it:
-
-~~~powershell
 .\bank-management-system.exe
-~~~
+```
 
-Alternatively, open `main.c` in Code::Blocks and build and run the program.
+**Linux/macOS:**
 
-## How to Use
+```bash
+gcc main.c -o bank-management-system
+./bank-management-system
+```
 
-1. Launch the application.
-2. Select **Register an account**.
-3. Enter your account number, phone number, and password.
-4. Restart the application and select **Login to account**.
-5. Access the banking menu to:
-   - Check your balance
-   - Deposit money
-   - Withdraw money
-   - Change your password
-   - Exit
+Alternatively, open `main.c` in Code::Blocks and build and run the program there.
 
-## Data Storage
+### Basic usage
 
-Account information is stored in local binary `.dat` files named after registered phone numbers.
+1. Run the application and choose **Register an account**.
+2. Enter the requested account number, phone number, and password.
+3. Restart or return to the login option and sign in using the registered details.
+4. Use the account menu to check the balance, deposit, withdraw, or update the password.
 
-These files contain account information, including passwords and balances, and should not be uploaded to a public repository.
+The program stores account information in local `.dat` files so account data can persist between runs. Keep those runtime files out of your public repository.
 
-## Known Limitations
+## Project Structure
 
-- Passwords are stored without encryption or hashing.
-- Negative transaction amounts are not currently rejected.
-- Input validation and file error handling are limited.
-- Some screen-clearing commands are Windows-specific.
+```text
+bank-management-system-c/
+├── main.c          # Main application source
+├── README.md       # Project documentation
+└── .gitignore      # Files excluded from Git
+```
 
-**Note:** This project is intended for educational purposes only and should not be used for real banking operations.
+## What I Practiced
 
-## Author
+- Modeling account information using C structures
+- Building menu-driven flows with conditions and loops
+- Working with user input and basic transaction checks
+- Reading and writing persistent binary files
+- Organizing and documenting an academic C project
 
-**Md Saimum Islam Fahad**
+## Limitations & Next Steps
 
-Computer Science & Engineering Undergraduate  
-North South University
+This project uses local files and a console interface. It does **not** provide production-grade authentication, encryption, transaction auditing, or secure banking infrastructure. Do not use real account credentials or financial data.
 
-[LinkedIn](https://www.linkedin.com/in/md-saimum-islam-fahad/)
+Potential future improvements include stronger input validation, more modular source files, better error handling, and automated tests.
+
+---
+
+<p align="center">
+  <a href="https://github.com/saimumfahad-dev">GitHub Profile</a> ·
+  <a href="https://www.linkedin.com/in/md-saimum-islam-fahad/">LinkedIn</a>
+  <br />
+  <sub>Built for learning · Code · Build · Learn</sub>
+</p>
