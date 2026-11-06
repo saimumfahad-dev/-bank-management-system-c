@@ -1,119 +1,125 @@
 
-<h1 align="center">Bank Management System</h1>
+<h1 align="center">✦ Bank Management System ✦</h1>
 
 <p align="center">
-  <strong>A console-based banking simulator built with C.</strong><br />
-  An academic project exploring account management, transactions, and persistent file storage.
+  <strong>A console-based banking simulator written in C.</strong><br />
+  <sub>Academic project · Structured programming · Binary file storage</sub>
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Language-C-0F766E?style=flat-square&logo=c&logoColor=white" alt="C" />
-  <img src="https://img.shields.io/badge/Interface-CLI-17252A?style=flat-square" alt="Command line" />
-  <img src="https://img.shields.io/badge/Storage-Binary%20Files-0F766E?style=flat-square" alt="Binary files" />
-  <img src="https://img.shields.io/badge/Type-Academic%20Project-263238?style=flat-square" alt="Academic project" />
+  <img src="https://img.shields.io/badge/Language-C-A77BC4?style=flat-square&labelColor=241B2D&logo=c&logoColor=white" alt="C" />
+  <img src="https://img.shields.io/badge/Interface-Console-8E63AC?style=flat-square&labelColor=241B2D" alt="Console application" />
+  <img src="https://img.shields.io/badge/Storage-Binary%20Files-A77BC4?style=flat-square&labelColor=241B2D" alt="Binary file storage" />
+  <img src="https://img.shields.io/badge/Project-Academic-8E63AC?style=flat-square&labelColor=241B2D" alt="Academic project" />
 </p>
 
 <p align="center">
-  <a href="#overview">Overview</a> ·
-  <a href="#features">Features</a> ·
-  <a href="#getting-started">Getting Started</a> ·
-  <a href="#project-structure">Source</a>
+  <a href="#-overview">Overview</a> ·
+  <a href="#-features">Features</a> ·
+  <a href="#-technologies--concepts">Tech Stack</a> ·
+  <a href="#-getting-started">Getting Started</a> ·
+  <a href="#-limitations--future-improvements">Limitations</a>
 </p>
 
 ---
 
-## Overview
+## ✦ Overview
 
-**Bank Management System** is a menu-driven C application that simulates basic banking operations. It was developed as an academic programming project to practice structured programming, user-defined structures, account workflows, and binary file handling.
+**Bank Management System** is a menu-driven C program that simulates basic account-management operations. It was built as an academic project to practice C structures, control flow, functions, and persistence using local binary files.
 
-The program runs locally in the terminal. It is designed for learning, not real financial transactions.
+The application runs in a terminal and does **not** connect to a real bank or payment service.
 
-## Features
+## ◈ Features
 
-| Area | Implemented functionality |
+| Area | Functionality |
 | --- | --- |
-| Account setup | Register using an account number, phone number, and password |
-| Account access | Log in using the registered phone number and password |
-| Balance | View the current account balance |
-| Transactions | Deposit and withdraw funds, with insufficient-balance checking |
-| Account settings | Change the account password |
-| Persistence | Save and load account data locally using binary `.dat` files |
+| **Account registration** | Register with an account number, phone number, and password |
+| **Authentication** | Log in with the registered phone number and password |
+| **Balance inquiry** | View the current account balance |
+| **Deposit** | Add an entered amount to the account balance |
+| **Withdrawal** | Withdraw an entered amount, with an insufficient-funds check |
+| **Password change** | Update the account password |
+| **Local persistence** | Read and write account records in binary `.dat` files |
 
-## Technologies & Concepts
+## 🛠 Technologies & Concepts
 
 <p>
-  <img src="https://skillicons.dev/icons?i=c&theme=dark" alt="C programming language" height="44" />
+  <img src="https://skillicons.dev/icons?i=c&theme=dark" alt="C programming language" height="42" />
 </p>
 
 - **Language:** C
-- **Libraries:** `stdio.h`, `stdlib.h`, `string.h`
-- **IDE used:** Code::Blocks
-- **Concepts:** structures, functions, conditional logic, loops, switch statements, string operations, and binary file I/O
+- **Development environment:** Code::Blocks / GCC
+- **Standard headers:** `stdio.h`, `stdlib.h`, `string.h`
+- **Core concepts:** structures, functions, loops, conditions, `switch`, strings, and binary file I/O
 
-## Getting Started
+## ⌘ Getting Started
 
 ### Requirements
 
-- A C compiler such as GCC, or Code::Blocks configured with a C compiler
-- A terminal or command prompt
+- A C compiler such as GCC (or Code::Blocks with a configured compiler)
+- **Windows is recommended:** parts of the current source use the Windows-specific `cls` command for clearing the console
 
-### Build and run with GCC
+### Compile and run
 
-Open a terminal in the folder containing `main.c`.
-
-**Windows:**
+Open a terminal in the directory containing `main.c`.
 
 ```bash
 gcc main.c -o bank-management-system.exe
+```
+
+Run it in Windows PowerShell:
+
+```powershell
 .\bank-management-system.exe
 ```
 
-**Linux/macOS:**
+Alternatively, open `main.c` in **Code::Blocks**, then build and run it.
 
-```bash
-gcc main.c -o bank-management-system
-./bank-management-system
-```
+### How to use
 
-Alternatively, open `main.c` in Code::Blocks and build and run the program there.
+1. Start the application and choose **Register an account**.
+2. Enter an account number, phone number, and password.
+3. Start the application again and choose **Login to account**.
+4. After logging in, check the balance, deposit, withdraw, or change the password.
+5. The application saves account data in a `.dat` file named after the registered phone number.
 
-### Basic usage
+Use fictional account details only.
 
-1. Run the application and choose **Register an account**.
-2. Enter the requested account number, phone number, and password.
-3. Restart or return to the login option and sign in using the registered details.
-4. Use the account menu to check the balance, deposit, withdraw, or update the password.
-
-The program stores account information in local `.dat` files so account data can persist between runs. Keep those runtime files out of your public repository.
-
-## Project Structure
+## ▣ Project Structure
 
 ```text
 bank-management-system-c/
-├── main.c          # Main application source
-├── README.md       # Project documentation
-└── .gitignore      # Files excluded from Git
+├── main.c         # Application source
+├── README.md      # Project documentation
+└── .gitignore     # Ignore generated files
 ```
 
-## What I Practiced
+## ✧ What I Practiced
 
-- Modeling account information using C structures
-- Building menu-driven flows with conditions and loops
-- Working with user input and basic transaction checks
-- Reading and writing persistent binary files
-- Organizing and documenting an academic C project
+- Modeling user records with a `struct`
+- Implementing a menu-driven command-line interface
+- Applying control flow to account actions
+- Reading and writing binary account files with `fread` and `fwrite`
+- Handling a basic insufficient-balance condition
 
-## Limitations & Next Steps
+## ⚠ Limitations & Future Improvements
 
-This project uses local files and a console interface. It does **not** provide production-grade authentication, encryption, transaction auditing, or secure banking infrastructure. Do not use real account credentials or financial data.
+This is an **educational simulation, not secure banking software**. Passwords are stored in local account files without encryption. Input checking is limited, and the current transaction logic is not safe against all invalid amounts or malformed input. The program also uses Windows-oriented console clearing.
 
-Potential future improvements include stronger input validation, more modular source files, better error handling, and automated tests.
+Potential improvements include:
+
+- Stronger numeric and string input validation
+- Rejection of negative and invalid transaction amounts
+- Safer credential handling and storage
+- Better file I/O error handling and automated tests
+- A more portable and modular implementation
 
 ---
 
 <p align="center">
   <a href="https://github.com/saimumfahad-dev">GitHub Profile</a> ·
+  <a href="https://github.com/saimumfahad-dev/crime-investigation-portal-java">Java Project</a> ·
   <a href="https://www.linkedin.com/in/md-saimum-islam-fahad/">LinkedIn</a>
   <br />
-  <sub>Built for learning · Code · Build · Learn</sub>
+  <sub>✦ Code · Build · Learn ✦</sub>
 </p>
